@@ -10,6 +10,7 @@
     'application': True,
     'data': [
         'security/ir.model.access.csv',
-        'views/state_property_views.xml'
+        'views/state_property_views.xml',
+        'views/state_menu_views.xml'
     ]
 }
