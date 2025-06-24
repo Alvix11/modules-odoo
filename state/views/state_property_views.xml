@@ -1,0 +1,4 @@
+<record id="state_property_action" model="ir.actions.act_windows">
+    <field name="name">State Property</field>
+    <field name="res_model">state.property</field>
+</record>
