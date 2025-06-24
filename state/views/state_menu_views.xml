@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Menu principal -->
+    <menuitem id="state_menu_root" name="Inmobiliaria"/>
+
+    <!-- Submenu -->
+    <menuitem id="state_menu_properties" name="Propiedades" parent="state_menu_root"/>
+
+    <!-- Menú final que abre la acción de ventana -->
+    <menuitem id="state_menu_state_properties" name="State Properties" parent="state_menu_properties" action="state_property_action"/>
+</odoo>
