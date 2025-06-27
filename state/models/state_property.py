@@ -1,4 +1,5 @@
 from odoo import models, fields # type: ignore
+from datetime import date, timedelta
 
 class StateProperty(models.Model):
     _name = 'state.property'
@@ -7,10 +8,10 @@ class StateProperty(models.Model):
     name = fields.Char(required=True)
     description = fields.Text()
     postcode = fields.Char()
-    date_availability = fields.Date(copy=False)
+    date_availability = fields.Date(default=lambda self: fields.Date.to_string(date.today() + timedelta(days=90)), copy=False)
     expected_price = fields.Float(required=True)
     selling_price = fields.Float(readonly=True, copy=False)
-    bedrooms = fields.Integer()
+    bedrooms = fields.Integer(default=2)
     living_area = fields.Integer()
     facades = fields.Integer()
     garage = fields.Boolean()
