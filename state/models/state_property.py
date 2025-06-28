@@ -26,3 +26,4 @@ class StateProperty(models.Model):
         ],
         string='Garden Orientation'
     )
+    active = fields.Boolean(default=True)
