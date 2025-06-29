@@ -4,4 +4,33 @@
         <field name="name">State Property</field>
         <field name="res_model">state.property</field>
     </record>
+
+    <record id="state_property_list" model="ir.ui.view">
+        <field name="name">state.property.list</field>
+        <field name="model">state.property</field>
+        <field name="arch" type="xml">
+            <list string="Channel">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="state_property_view_form" model="ir.ui.view">
+        <field name="name">state.property.form</field>
+        <field name="model">state.property</field>
+        <field name="arch" type="xml">
+            <form string="State Property">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_lost_leads" type="object" class="oe_stat_button" icon="fa-star">
+                            <div class="o_stat_info">
+                                <field name="bedrooms" class="o_stat_value"/>
+                                <span class="o_stat_text">Bedrooms</span>
+                            </div>
+                        </button>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>
