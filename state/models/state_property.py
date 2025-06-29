@@ -27,3 +27,15 @@ class StateProperty(models.Model):
         string='Garden Orientation'
     )
     active = fields.Boolean(default=True)
+    state = fields.Selection(
+        selection=[
+            ('new', 'New'),
+            ('offer received', 'Offer Received'),
+            ('offer accepted', 'Offer Accepted'),
+            ('sold','Sold'),
+            ('cancelled', 'Cancelled')
+        ], 
+        required=True,
+        copy=False, 
+        default='new'
+    )
